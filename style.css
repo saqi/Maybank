@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(217, 212,206);
+
+}
+
+#logo {
+    display: block;
+    height: 130px;
+    margin: 0 auto;
+}
+
+.subt {
+    width: 32%;
+    margin: 0 auto;
+    color: rgb(124,96,49);
+}
+
+/* Style for hr tag (line) */
+.line {
+    width: 90%;
+    color: rgb(124,96,49);
+    background: rgb(124,96,49);
+    height: 2px;
+}
+/* Style for main content */
+#mContent {
+    height: 700px;
+    color: rgb(124,96,49);
+}
+
+footer {
+    color: rgb(124,96,49);
+}
+
+div.center {
+    text-align: center;
+}
+
+#fText {
+    font-size: 65px;
+    margin-bottom: -7px;
+}
+
+/* word spacing doesn't work as spaces within some numbers, html &ensp;/&emsp; used instead */
+/* #emails { 
+    word-spacing: 25px;
+}
+
+#mNumbers {
+    word-spacing: 15px;
+} */
+
+.bText {
+    font-weight: bold;
+}
