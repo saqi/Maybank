@@ -1,0 +1,21 @@
+800*1800/2000
+
+gold colour: 7A5E2A hex 118 90 39
+
+LOGO TEXT SIZE 18PX
+menu 13px
+
+CONTENT 560PX WIDTH
+120px - 680px
+CARROUSEL 560 * 318
+
+
+0px 30px margin image content 500px remaining
+15px between each = 30px = 470 between 3
+156px width per image * 277
+156*15 (gray opacity)
+Text sixe 10px
+explain text 8px
+
+
+
