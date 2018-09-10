@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #7a5e2a;
-  box-sizing:border-box;
 }
 
 html, body {
   height: 100%;
+  color: #7a5e2a;
+  box-sizing:border-box;
 }
 
 .page {
@@ -25,6 +25,49 @@ main {
 
 img {
   width: 100%;
+}
+.no-js #slideshow {}
+#slideshow {
+  position: relative;
+}
+.js #slideshow figcaption {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 425px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+}
+.js .slideshow h3 { border-bottom: 2px solid white; }
+.no-js .slideshow #controls {
+  /* Do not display these when JS is disabled */
+  display: none;
+}
+.slideshow #controls a {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  color: white;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  font-size: 18px;
+  margin-top: -33px;
+}
+.slideshow #controls a:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.slideshow #controls #next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slideshow figure:not(#first-slide) {
+  /* We want only the first image in the slide show. */
+  display: none;
 }
 #grid {
   display: flex; /* let items have 'equal height' */
