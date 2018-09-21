@@ -7,6 +7,7 @@
 
 html, body {
   height: 100%;
+  width: 100%;
   color: #7a5e2a;
   box-sizing:border-box;
 }
@@ -22,6 +23,29 @@ html, body {
 main {
   background: white;
 }
+
+/* menu ---------------------- */
+#menu {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  background: #001837;
+}
+#menu li {
+  font-size: 1.5rem;
+}
+#menu li a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+#menu li a:hover {
+  background: #f02b2e;
+}
+@media screen and (min-width: 600px) {
+  #menu { flex-flow: row; }
+}
+/* menu ---------------------- */
 
 img {
   width: 100%;
