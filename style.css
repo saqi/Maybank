@@ -123,3 +123,7 @@ img {
   #grid li { display: block; width: 80%; height: 300px; }
   #grid .pic { background-size: contain; }
 }
+
+footer ul {
+  list-style: none;
+}
