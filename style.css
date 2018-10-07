@@ -50,48 +50,66 @@ main {
 img {
   width: 100%;
 }
-.no-js #slideshow {}
-#slideshow {
-  position: relative;
+@media screen and (max-width: 600px) {
+  #slideshow {
+    overflow: auto;
+    margin: 10px auto;
+    width: 90%;
+    max-height: 318px;
+    border: 1px solid black;
+  }
+  .slideshow figure {
+    display: block !important;
+    margin: 10px auto;
+    min-height: 318px;
+  }
+  .slideshow figcaption { clear: left; }
+  .slideshow figure img { width: 100%; }
+  #slideshow #controls { display: none; }
 }
-.js #slideshow figcaption {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  width: 425px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 10px;
-}
-.js .slideshow h3 { border-bottom: 2px solid white; }
-.no-js .slideshow #controls {
-  /* Do not display these when JS is disabled */
-  display: none;
-}
-.slideshow #controls a {
-  height: 30px;
-  width: auto;
-  cursor: pointer;
-  color: white;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  font-size: 18px;
-  margin-top: -33px;
-}
-.slideshow #controls a:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.slideshow #controls #next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.slideshow figure:not(#first-slide) {
-  /* We want only the first image in the slide show. */
-  display: none;
+@media screen and (min-width: 600px) {
+  #slideshow {
+    position: relative;
+  }
+  .js #slideshow figcaption {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 425px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+  }
+  .js .slideshow h3 { border-bottom: 2px solid white; }
+  .no-js .slideshow #controls {
+    /* Do not display these when JS is disabled */
+    display: none;
+  }
+  .slideshow #controls a {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    color: white;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    font-size: 18px;
+    margin-top: -33px;
+  }
+  .slideshow #controls a:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .slideshow #controls #next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .slideshow figure:not(#first-slide) {
+    /* We want only the first image in the slide show. */
+    display: none;
+  }
 }
 #grid {
   display: flex; /* let items have 'equal height' */
