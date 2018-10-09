@@ -34,7 +34,7 @@ a#header {
 }
 
 main {
-  background: white;
+  margin: 0 auto;
 }
 
 /* menu ---------------------- */
@@ -140,29 +140,28 @@ img {
   justify-content: space-evenly;
 }
 #grid li {
-  overflow: auto;
+  overflow: hidden;
   margin: 1em auto;
-  width: 30%;
-  height:440px;
+  width:234px;
+  height:415px;
   border-radius: 1em;
   border: .2em solid black;
 }
-#grid .pic {
-  background: no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+#grid .picMessage h4 {
+  margin-bottom: 55px;
 }
-#grid #spec-decor .pic    { background-image:url(Images/pic1.png); }
-#grid #gilding .pic       { background-image:url(Images/pic2.png); }
-#grid #sign-writing .pic  { background-image:url(Images/pic3.png); }
-/* smaller screens */
-@media (max-width: 600px) {
-  #grid {
-    flex-flow: column;
-  }
-  #grid li { display: block; width: 80%; height: 300px; }
-  #grid .pic { background-size: contain; }
+#grid .picMessage {
+  position: relative;
+  padding: 10px;
+  background-color: grey;
+  text-align: center;
+  height: 415px;
+  top: -50px;
+  opacity: 0.8;
+  color: white;
+}
+#grid li img {
+  width: 100%;
 }
 
 footer ul {

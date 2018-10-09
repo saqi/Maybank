@@ -10,6 +10,7 @@
   <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <article id="index" class="page">
@@ -83,26 +84,41 @@
 
       <h1>Maybank Architectural Restorations</h1>
       <p>Maybank Associates is a long established family business...</p>
+
+
+
+
+
+
       <ul id="grid">
         <li id="spec-decor">
-          <div class="pic"></div>
-          <h4>Specialist Decorating</h4>
-          <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium, te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero ius in. Vide explicari vis ea, mandamus maiestatis ius ex, legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam. Errem conceptam pri no.</p>
+          <img src="./Images/pic1.png">
+          <section class="picMessage">
+            <h4>Specialist Decorating</h4>
+            <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium, te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero ius in. Vide explicari vis ea, mandamus maiestatis ius ex, legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam. Errem conceptam pri no.</p>
+          </section>
         </li>
         <li id="gilding">
-          <div class="pic"></div>
-          <h4>Gilding</h4>
-          <p>text text texttext text texttext text texttext text texttext text texttext text texttext text texttext text text</p>
+          <img src="./Images/pic2.png">
+          <section class="picMessage">
+            <h4>Gilding</h4>
+            <p>text text texttext text texttext text texttext text texttext text texttext text texttext text texttext text text</p>
+          </section>
         </li>
         <li id="sign-writing">
-          <div class="pic"></div>
-          <h4>Sign Writing</h4>
-          <p>Lorem ipsum LLLLLorem ipsum</p>
+          <img src="./Images/pic3.png">
+          <section class="picMessage">
+            <h4>Sign Writing</h4>
+            <p>Lorem ipsum LLLLLorem ipsum</p>
+          </section>
         </li>
-        <li>Specialist Decorating</li>
-        <li>Gilding</li>
-        <li>Sign Writing</li>
       </ul>
+
+
+
+
+
+
       <h2>Testimonials</h2>
       <section class="carrousel">
         <p>Paul...</p>
@@ -124,9 +140,27 @@
 
       <h3>Maybank Associates Limited</h3>
       <p>A limited company registered in England and Wales Registered number 8334740 VAT number: 720 0518 85</p>
-      <h4>&copy; 2018 Website designed by <a href="Saq-web-page">Saq</a></h4>
+      <h4>&copy; 2018 Website designed by <a href="https://github.com/saqi">Saq</a> and <a href="https://github.com/adam17">Adam</a></h4>
     </footer>
   </article>
   <script src="slideshow.js"></script>
+  <script>
+$( document ).ready(function () {
+  // find elements
+  $featurePic = $("#grid li");
+  $picMessage = $("#grid .picMessage");
+
+  // handle hover
+  $featurePic.mouseenter(
+    function(){
+      $(this).find($picMessage).animate({'top': '-400px' }, 'medium');
+    });
+
+  $featurePic.mouseleave(
+    function(){
+      $(this).find($picMessage).animate({'top': '-50px' }, 'medium');
+    });
+});
+  </script>
 </body>
 </html>
