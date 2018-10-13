@@ -1,0 +1,18 @@
+- get rid of 6th picture. I admit, it was bad ;)
+- restore prev/next buttons and cast aside automatic slideshow
+- we do not need the loader bar any more. It **was** pure CSS:
+```css
+  #loader {
+    margin-top:-4px;
+    width: 100%;
+    height: 3px;
+    background: #7a5e2a;
+    animation-name: s3loader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes s3loader {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+```

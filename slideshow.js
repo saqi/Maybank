@@ -19,10 +19,5 @@
     if (index > slides.length)
       index = 1;
     slides[index-1].style.display = 'block';
-
-    // change image every *time*
-    if (window.matchMedia("(min-width: 600px)").matches) {
-      setTimeout(showSlides, 3000);
-    }
   };
 })();

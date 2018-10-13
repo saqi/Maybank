@@ -18,6 +18,8 @@ html, body {
   box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
     -30px 0px 40px rgba(0, 0, 0, 0.1);
   background: #eee;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -35,6 +37,7 @@ a#header {
 
 main {
   margin: 0 auto;
+  width: 100%;
 }
 
 /* menu ---------------------- */
@@ -145,19 +148,6 @@ img {
   .slideshow figure:not(#first-slide) {
     /* We want only the first image in the slide show. */
     display: none;
-  }
-  #loader {
-    margin-top:-4px;
-    width: 100%;
-    height: 3px;
-    background: #7a5e2a;
-    animation-name: s3loader;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes s3loader {
-    from { width: 0%; }
-    to { width: 100%; }
   }
 }
 #grid {
