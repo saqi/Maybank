@@ -38,7 +38,9 @@ a#header {
 main {
   margin: 0 auto;
   width: 100%;
+  color: black;
 }
+main section { padding: 1.5em; }
 
 /* menu ---------------------- */
 #menu {
@@ -159,12 +161,14 @@ img {
   overflow: hidden;
   margin: 1em auto;
   width:234px;
-  height:415px;
+  height:190px;
   border-radius: 1em;
   border: .2em solid black;
 }
 #grid .picMessage h4 {
-  margin-bottom: 55px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  height: 30px;
 }
 #grid .picMessage {
   position: relative;
@@ -178,6 +182,8 @@ img {
 }
 #grid li img {
   width: 100%;
+  width:234px;
+  height:190px;
 }
 
 footer ul {

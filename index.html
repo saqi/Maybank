@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Maybank Associates</title>
-  <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id="jQ" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+
+/* Make sure jQuery is there */
+$ = $ || (document.getElementById('jQ').src = 'jquery.min.js');
+</script>
 </head>
 <body>
   <article id="index" class="page">
@@ -71,14 +74,19 @@
         </figure>
 
         <div id="controls">
-          <a id="prev">prev</a>
-          <a id="next">next</a>
+          <a id="prev">&laquo; prev</a>
+          <a id="next">next &raquo;</a>
         </div>
       </section> <!-- end of slideshow -->
 
-      <h1>Maybank Architectural Restorations</h1>
-      <p>Maybank Associates is a long established family business...</p>
 
+
+
+
+      <section>
+        <h1>Maybank Architectural Restorations</h1>
+        <p>Maybank Associates is a long established family business...</p>
+      </section>
 
 
 
@@ -86,24 +94,30 @@
 
       <ul id="grid">
         <li id="spec-decor">
-          <img src="./Images/pic1.png" alt="Picture #1">
+          <img src="./Images/Specialist-Design.jpg" alt="Specialist Design">
           <section class="picMessage">
-            <h4>Specialist Decorating</h4>
-            <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium, te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero ius in. Vide explicari vis ea, mandamus maiestatis ius ex, legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam. Errem conceptam pri no.</p>
+            <h4>Specialist Design</h4>
+            <p>With years of experience in specialist decorating,
+            we have worked on a variety of projects. Whatever your requirements,
+            you can expect a high quality finish.</p>
           </section>
         </li>
         <li id="gilding">
-          <img src="./Images/pic2.png" alt="Picture #2">
+          <img src="./Images/Gilding.jpg" alt="Gilding">
           <section class="picMessage">
             <h4>Gilding</h4>
-            <p>text text texttext text texttext text texttext text texttext text texttext text texttext text texttext text text</p>
+            <p>We specialise in all types of internal and external gilding.
+            Our portfolio boasts work done from Churches and
+            Cottages to Mosques and Mansions.</p>
           </section>
         </li>
         <li id="sign-writing">
-          <img src="./Images/pic3.png" alt="Picture #3">
+          <img src="./Images/Sign-writing.jpg" alt="Sign writing">
           <section class="picMessage">
             <h4>Sign Writing</h4>
-            <p>Lorem ipsum LLLLLorem ipsum</p>
+            <p>We design, manufacture and install signs, including advertising
+            signs for shops, businesses and public facilities as well as signs
+            for transport systems.</p>
           </section>
         </li>
       </ul>
@@ -113,9 +127,13 @@
 
 
 
-      <section class="carrousel">
+      <section>
         <h2>Testimonials</h2>
-        <p>Paul...</p>
+        <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium,
+        te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero
+        ius in. Vide explicari vis ea, mandamus maiestatis ius ex,
+        legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam.
+        Errem conceptam pri no.</p>
       </section>
     </main>
     <footer>
