@@ -166,9 +166,12 @@ img {
   border: .2em solid black;
 }
 #grid .picMessage h4 {
-  margin-bottom: 15px;
-  border-bottom: 2px solid white;
+  margin-bottom: 10px;
   height: 30px;
+}
+#grid .picMessage > p {
+  border-top: 2px solid white;
+  padding-top: 5px;
 }
 #grid .picMessage {
   position: relative;
