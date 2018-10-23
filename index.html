@@ -7,26 +7,31 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Maybank Associates</title>
-  <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
-  </script>
+  <script id="jQ" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+
+/* Make sure jQuery is there */
+$ = $ || (document.getElementById('jQ').src = 'jquery.min.js');
+</script>
 </head>
 <body>
   <article id="index" class="page">
-    <header>
-      <div id="logo"></div>
-      <hgroup>
-        <h1>Maybank Associates</h1>
-        <h2>Architectural Restorations</h2>
-      </hgroup>
-    </header>
+    <a id="header" href="./">
+      <header>
+          <hgroup>
+              <h1>Maybank Associates</h1>
+              <h2>Architectural Restorations</h2>
+          </hgroup>
+      </header>
+    </a>
     <nav>
       <ul id="menu">
-        <li><a href="./">Home</a></li>
-        <li><a href="./about">About</a></li>
-        <li><a href="./services">Services</a></li>
-        <li><a href="./gallery">Gallery</a></li>
-        <li><a href="./contact">Contact</a></li>
+        <li><a class="current" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <main>
@@ -35,75 +40,130 @@
         <figure id="first-slide">
           <img src="./Images/carrousel.png">
           <figcaption>
-            <h3>Unique Decorative Finishes</h3>
+            <h3>1. Unique Decorative Finishes</h3>
             <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
           </figcaption>
         </figure>
         <figure>
           <img src="./Images/carrousel1.png">
           <figcaption>
-            <h3>Second image</h3>
+            <h3>2. Second image</h3>
             <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
           </figcaption>
         </figure>
         <figure>
           <img src="./Images/carrousel2.png">
           <figcaption>
-            <h3>3333333333</h3>
+            <h3>3</h3>
             <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
           </figcaption>
         </figure>
         <figure>
           <img src="./Images/carrousel3.png">
           <figcaption>
-            <h3>Picture 3rd</h3>
+            <h3>4. Picture this</h3>
             <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
           </figcaption>
         </figure>
         <figure>
           <img src="./Images/carrousel4.png">
           <figcaption>
-            <h3>Unique Decorative Finishes</h3>
+            <h3>5. Unique Decorative Finishes</h3>
             <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
           </figcaption>
         </figure>
-        <figure>
-          <img src="./Images/carrousel5.png">
-          <figcaption>
-            <h3>Unique Decorative Finishes</h3>
-            <p>Within our portfolio we have range of various finishes from the very subtle to those designed to create a wow factor.</p>
-          </figcaption>
-        </figure>
+
         <div id="controls">
-          <a id="prev">&#10094;</a>
-          <a id="next">&#10095;</a>
+          <a id="prev">❮</a>
+          <a id="next">❯</a>
         </div>
       </section> <!-- end of slideshow -->
-      <h1>Maybank Architectural Restorations</h1>
-      <p>Maybank Associates is a long established family business...</p>
+
+
+
+
+
+      <section>
+        <h1>Maybank Architectural Restorations</h1>
+        <p>Maybank Associates is a long established family business...</p>
+      </section>
+
+
+
+
+
       <ul id="grid">
         <li id="spec-decor">
-          <div class="pic"></div>
-          <h4>Specialist Decorating</h4>
-          <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium, te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero ius in. Vide explicari vis ea, mandamus maiestatis ius ex, legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam. Errem conceptam pri no.</p>
+          <img src="./Images/Specialist-Design.jpg" alt="Specialist Design">
+          <section class="picMessage">
+            <h4>Specialist Design</h4>
+            <p>With years of experience in specialist decorating,
+            we have worked on a variety of projects. Whatever your requirements,
+            you can expect a high quality finish.</p>
+          </section>
         </li>
         <li id="gilding">
-          <div class="pic"></div>
-          <h4>Gilding</h4>
-          <p>text text texttext text texttext text texttext text texttext text texttext text texttext text texttext text text</p>
+          <img src="./Images/Gilding.jpg" alt="Gilding">
+          <section class="picMessage">
+            <h4>Gilding</h4>
+            <p>We specialise in all types of internal and external gilding.
+            Our portfolio boasts work done from Churches and
+            Cottages to Mosques and Mansions.</p>
+          </section>
         </li>
         <li id="sign-writing">
-          <div class="pic"></div>
-          <h4>Sign Writing</h4>
-          <p>Lorem ipsum LLLLLorem ipsum</p>
+          <img src="./Images/Sign-writing.jpg" alt="Sign writing">
+          <section class="picMessage">
+            <h4>Sign Writing</h4>
+            <p>We design, manufacture and install signs, including advertising
+            signs for shops, businesses and public facilities as well as signs
+            for transport systems.</p>
+          </section>
         </li>
-        <li>Specialist Decorating</li>
-        <li>Gilding</li>
-        <li>Sign Writing</li>
+
+
+
+        <li id="spec-decor-example">
+          <img src="./Images/Specialist-Design.jpg" alt="Specialist Design">
+          <section class="picMessage">
+            <h4>Specialist Design</h4>
+            <p>With years of experience in specialist decorating,
+            we have worked on a variety of projects. Whatever your requirements,
+            you can expect a high quality finish.</p>
+          </section>
+        </li>
+        <li id="gilding-example">
+          <img src="./Images/Gilding.jpg" alt="Gilding">
+          <section class="picMessage">
+            <h4>Gilding</h4>
+            <p>We specialise in all types of internal and external gilding.
+            Our portfolio boasts work done from Churches and
+            Cottages to Mosques and Mansions.</p>
+          </section>
+        </li>
+        <li id="sign-writing-example">
+          <img src="./Images/Sign-writing.jpg" alt="Sign writing">
+          <section class="picMessage">
+            <h4>Sign Writing</h4>
+            <p>We design, manufacture and install signs, including advertising
+            signs for shops, businesses and public facilities as well as signs
+            for transport systems.</p>
+          </section>
+        </li>
       </ul>
-      <h2>Testimonials</h2>
-      <section class="carrousel">
-        <p>Paul...</p>
+
+
+
+
+
+
+      <section>
+        <h2>Testimonials</h2>
+        <p>Lorem ipsum dolor sit amet, eu per noster dolorem petentium,
+        te vim quem saepe animal. Mazim persecuti per ne. Dictas eirmod cetero
+        ius in. Vide explicari vis ea, mandamus maiestatis ius ex,
+        legimus vocibus probatus eam at. Nec ut ubique quaeque conceptam.
+        Errem conceptam pri no.</p>
       </section>
     </main>
     <footer>
@@ -122,9 +182,10 @@
 
       <h3>Maybank Associates Limited</h3>
       <p>A limited company registered in England and Wales Registered number 8334740 VAT number: 720 0518 85</p>
-      <h4>&copy; 2018 Website designed by <a href="Saq-web-page">Saq</a></h4>
+      <h4>&copy; 2018 Website designed by <a href="https://github.com/saqi">Saq</a> and <a href="https://github.com/adam17">Adam</a></h4>
     </footer>
   </article>
   <script src="slideshow.js"></script>
+  <script src="slideup.js"></script>
 </body>
 </html>

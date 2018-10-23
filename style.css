@@ -1,5 +1,5 @@
 * {
-  border: none;
+  border: 0;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,80 +18,139 @@ html, body {
   box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
     -30px 0px 40px rgba(0, 0, 0, 0.1);
   background: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: url(./Images/logo.svg) no-repeat top left;;
+  background-size: 150px;
+  padding-top: 15px;
+  padding-left:150px;
+  height:120px;
+}
+a#header {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
-  background: white;
+  margin: 0 auto;
+  width: 100%;
+  color: black;
 }
+main section { padding: 1.5em; }
 
 /* menu ---------------------- */
 #menu {
   list-style: none;
   display: flex;
   flex-flow: column;
-  background: #001837;
+  text-align: center;
 }
 #menu li {
   font-size: 1.5rem;
 }
+#menu li a.current {
+  border-radius: 15px 15px 0 0;
+  background: #7a5e2a;
+  color: white;
+}
+#menu li a.current:hover {
+  border-bottom: 3px solid black;
+}
 #menu li a {
   padding: 10px;
   display: block;
-  color: white;
+  color: #7a5e2a;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
 }
 #menu li a:hover {
-  background: #f02b2e;
+  border-radius: 15px 15px 0 0;
+  /*color: #7a5e2a;*/
+  color: black;
+  background: white;
 }
 @media screen and (min-width: 600px) {
-  #menu { flex-flow: row; }
+  #menu {
+    flex-flow: row;
+    background: inherit;
+    margin-left: 125px;
+    margin-top: -50px;
+  }
+  #menu li a { color: #7a5e2a; }
+  #menu li a:hover {
+  }
 }
 /* menu ---------------------- */
 
 img {
   width: 100%;
 }
-.no-js #slideshow {}
-#slideshow {
-  position: relative;
+@media screen and (max-width: 600px) {
+  #slideshow {
+    overflow: auto;
+    margin: 10px auto;
+    width: 90%;
+    max-height: 318px;
+    border: 1px solid black;
+  }
+  .slideshow figure {
+    display: block !important;
+    margin: 10px auto;
+    min-height: 318px;
+  }
+  .slideshow figcaption { clear: left; }
+  .slideshow figure img { width: 100%; }
+  #slideshow #controls { display: none; }
 }
-.js #slideshow figcaption {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  width: 425px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 10px;
-}
-.js .slideshow h3 { border-bottom: 2px solid white; }
-.no-js .slideshow #controls {
-  /* Do not display these when JS is disabled */
-  display: none;
-}
-.slideshow #controls a {
-  height: 30px;
-  width: auto;
-  cursor: pointer;
-  color: white;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  font-weight: bold;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  font-size: 18px;
-  margin-top: -33px;
-}
-.slideshow #controls a:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.slideshow #controls #next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.slideshow figure:not(#first-slide) {
-  /* We want only the first image in the slide show. */
-  display: none;
+@media screen and (min-width: 600px) {
+  #slideshow {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .js #slideshow figcaption {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 425px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+  }
+  .js .slideshow h3 { border-bottom: 2px solid white; }
+  .no-js .slideshow #controls {
+    /* Do not display these when JS is disabled */
+    display: none;
+  }
+  .slideshow #controls a {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    color: white;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    font-size: 18px;
+    margin-top: -33px;
+  }
+  .slideshow #controls a:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .slideshow #controls #next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .slideshow figure:not(#first-slide) {
+    /* We want only the first image in the slide show. */
+    display: none;
+  }
 }
 #grid {
   display: flex; /* let items have 'equal height' */
@@ -99,29 +158,35 @@ img {
   justify-content: space-evenly;
 }
 #grid li {
-  overflow: auto;
+  overflow: hidden;
   margin: 1em auto;
-  width: 30%;
-  height:440px;
+  width:234px;
+  height:190px;
   border-radius: 1em;
   border: .2em solid black;
 }
-#grid .pic {
-  background: no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+#grid .picMessage h4 {
+  margin-bottom: 10px;
+  height: 30px;
 }
-#grid #spec-decor .pic    { background-image:url(Images/pic1.png); }
-#grid #gilding .pic       { background-image:url(Images/pic2.png); }
-#grid #sign-writing .pic  { background-image:url(Images/pic3.png); }
-/* smaller screens */
-@media (max-width: 600px) {
-  #grid {
-    flex-flow: column;
-  }
-  #grid li { display: block; width: 80%; height: 300px; }
-  #grid .pic { background-size: contain; }
+#grid .picMessage > p {
+  border-top: 2px solid white;
+  padding-top: 5px;
+}
+#grid .picMessage {
+  position: relative;
+  padding: 10px;
+  background-color: grey;
+  text-align: center;
+  height: 415px;
+  top: -50px;
+  opacity: 0.8;
+  color: white;
+}
+#grid li img {
+  width: 100%;
+  width:234px;
+  height:190px;
 }
 
 footer ul {

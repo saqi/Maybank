@@ -1,0 +1,23 @@
+- Get rid of 6th picture. I admit, it was bad ;)
+- Restore prev/next buttons.
+- We do not need the loader bar any more. It **was** pure CSS:
+```css
+  #loader {
+    margin-top:-4px;
+    width: 100%;
+    height: 3px;
+    background: #7a5e2a;
+    animation-name: s3loader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes s3loader {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+```
+- I noticed that our webpage does not work correctly when there is no internet
+connection due to missing jQuery. That's why I add a local copy of it.
+- Pictures: /Images/Sign-writing.jpg is 1024x768 where the 2 other are 650x400.
+- Text and pictures replaced.
+- Other minor changes to the style.css.
