@@ -89,6 +89,7 @@ main section { padding: 1.5em; }
 img {
   width: 100%;
 }
+/*
 @media screen and (max-width: 600px) {
   #slideshow {
     overflow: auto;
@@ -107,6 +108,7 @@ img {
   #slideshow #controls { display: none; }
 }
 @media screen and (min-width: 600px) {
+*/
   #slideshow {
     margin: 0;
     padding: 0;
@@ -151,7 +153,9 @@ img {
     /* We want only the first image in the slide show. */
     display: none;
   }
+  /*
 }
+*/
 #grid {
   display: flex; /* let items have 'equal height' */
   flex-flow: row wrap;
@@ -163,7 +167,7 @@ img {
   width:234px;
   height:190px;
   border-radius: 1em;
-  border: .2em solid black;
+  border: .1em solid black;
 }
 #grid .picMessage h4 {
   margin-bottom: 10px;
