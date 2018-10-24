@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Maybank Associates - Hello in Our Gallery</title>
+  <script id="jQ" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+
+/* Make sure jQuery is there */
+$ = $ || (document.getElementById('jQ').src = 'jquery.min.js');
+</script>
+</head>
+<body>
+  <article id="gallery" class="page">
+    <a id="header" href=".">
+      <header>
+          <hgroup>
+              <h1>Maybank Associates</h1>
+              <h2>Architectural Restorations</h2>
+          </hgroup>
+      </header>
+    </a>
+    <nav>
+      <ul id="menu">
+        <li><a href=".">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a class="current" href="gallery.html">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Welcome in Our Gallery</h1>
+
+
+<style>
+#sshow {
+  margin:0 auto;
+  width: 100%;
+  height: 500px;
+  border: 5px solid red;
+  background-image: url(./Images/carrousel.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+#sshow button {
+  flex: auto;
+  padding: 1em;
+  border:2px solid black;
+  background: transparent;
+}
+#sshow button:hover {
+}
+</style>
+      <div id="sshow">
+        <button id="prev">❮</button>
+        <button id="playstop">►</button>
+        <button id="next">❯</button>
+      </div>
+<script>
+var galeria = ['./Images/carrousel.png', './Images/carrousel1.png',
+  './Images/carrousel2.png', './Images/carrousel3.png', './Images/carrousel4.png'];
+var index = 0;
+function changeSlide(param) {
+  switch (param) {
+  case '+':
+    index++;
+    if (index >= galeria.length) index= 0;
+    $('#sshow').css('background-image', 'url('+galeria[index]+')');
+    break;
+  case '-':
+    index--;
+      if (index < 0) index= galeria.length - 1;
+    $('#sshow').css('background-image', 'url('+galeria[index]+')');
+    break;
+  default:
+    break;
+  }
+  $('#licznik').text(`index=${index}`);
+}
+$('#prev').click(function () { changeSlide('-'); });
+$('#next').click(function () { changeSlide('+'); });
+</script>
+<p id="licznik">index= </p>
+
+
+
+
+
+
+
+
+
+
+
+   </main>
+    <footer>
+      <h1>Maybank</h1>
+      <h2>Constantine Hall Drive Gosfield Essex CO9 1SY</h2>
+      <ul id="emails">
+        <li>Lynne@maybankassociates.com</li>
+        <li>Paul@maybankassociates.com</li>
+        <li>Rob@maybankassociates.com</li>
+      </ul>
+      <ul id="tel">
+        <li><strong>M</strong>: 07702 458935</li>
+        <li><strong>M</strong>: 07531 525118</li>
+        <li><strong>T</strong>: 01787 273721</li>
+      </ul>
+
+      <h3>Maybank Associates Limited</h3>
+      <p>A limited company registered in England and Wales Registered number 8334740 VAT number: 720 0518 85</p>
+      <h4>&copy; 2018 Website designed by <a href="https://github.com/saqi">Saq</a> and <a href="https://github.com/adam17">Adam</a></h4>
+    </footer>
+  </article>
+  <script src="slideshow.js"></script>
+  <script src="slideup.js"></script>
+</body>
+</html>
