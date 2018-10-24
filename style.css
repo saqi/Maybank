@@ -193,6 +193,9 @@ img {
   height:190px;
 }
 
-footer ul {
-  list-style: none;
-}
+footer { text-align: center; }
+footer h1 { font-size: 50px; text-transform: uppercase; border-bottom:#7a5e2a solid 2px; }
+footer h2 { text-transform: uppercase; margin: 10px auto; }
+footer ul { list-style: none; display: flex; justify-content: center; }
+footer ul li { margin:15px; }
+footer h4.footer-created-by { color: blue; background:#aaa; }
