@@ -46,6 +46,9 @@ header hgroup {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 10px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 600px) {
   header hgroup {
@@ -227,6 +230,9 @@ footer ul li {
   display: flex;
   flex-wrap: nowrap;
 }
+footer p {
+  font-size: 16px;
+  }
 div.created-by { text-align: center; padding: .5em; color: black; font-size: 12px; font-family: arialnarrow;}
 
 @font-face {
