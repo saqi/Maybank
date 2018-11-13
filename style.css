@@ -240,3 +240,56 @@ div.created-by { text-align: center; padding: .5em; color: black; font-size: 12p
 font-family: arialnarrow;
   src: url(arial_narrow.ttf);
 }
+
+/* Testimonials */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid #333;
+}
+.flex-container div {
+  order: 1;
+  padding: 1em 0;
+}
+.flex-container div:not(:nth-child(1)) {
+  display: none;
+}
+.flex-container .prev a {
+  background-image: url(Images/chevron-square-left@1x.png);
+}
+.flex-container .next a {
+  background-image: url(Images/chevron-square-right@1x.png);
+}
+.flex-container .prev a,
+.flex-container .next a {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.flex-container ul {
+  list-style: none;
+  order: 10;
+  margin-top: auto; /* move to the bottom */
+  align-self: center;
+}
+.flex-container ul li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+.flex-container ul li a {
+  text-decoration: none;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+/* Testimonials */
