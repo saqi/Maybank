@@ -242,54 +242,60 @@ font-family: arialnarrow;
 }
 
 /* Testimonials */
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-  align-items: stretch;
-  justify-content: center;
-  border: 1px solid #333;
+#testimonials{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.flex-container div {
-  order: 1;
-  padding: 1em 0;
+#testimonials ul{
+  width: 100%;
+  height: 250px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
 }
-.flex-container div:not(:nth-child(1)) {
+#testimonials ul li{
+  padding: 4em 0;
+  list-style: none;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #000;
+  float: left;
+  box-sizing: border-box;
+  transition: 0.5s;
+  text-align: center;
+  overflow: hidden;
+}
+#testimonials ul:hover li{
+  padding: 1.5em 0;
+  width: 10%;
+}
+#testimonials ul li:hover{
+  width: 60%;
+}
+#testimonials ul li .content p{
   display: none;
 }
-.flex-container .prev a {
-  background-image: url(Images/chevron-square-left@1x.png);
+#testimonials ul li .content img{
+  width: 90px;
+  height: 90px;
 }
-.flex-container .next a {
-  background-image: url(Images/chevron-square-right@1x.png);
-}
-.flex-container .prev a,
-.flex-container .next a {
+#testimonials ul li:hover .content p{
   display: block;
-  width: 22px;
-  height: 22px;
 }
-.flex-container ul {
-  list-style: none;
-  order: 10;
-  margin-top: auto; /* move to the bottom */
-  align-self: center;
+#testimonials ul li:hover .content{
+  bottom: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  opacity: 1;
 }
-.flex-container ul li {
-  float: left;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
+#testimonials ul li .content h3{
+  color: #0066ff;
+  font-weight: 800;
 }
-.flex-container ul li a {
-  text-decoration: none;
-}
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 10px;
+#testimonials ul li .content p.address{
+  color: #669999;
 }
 /* Testimonials */
