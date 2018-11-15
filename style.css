@@ -255,6 +255,7 @@ font-family: arialnarrow;
   margin: 0;
   padding: 0;
   border: 1px solid #000;
+  box-sizing: border-box;
 }
 #testimonials ul li{
   padding: 4em 0;
@@ -268,6 +269,11 @@ font-family: arialnarrow;
   text-align: center;
   overflow: hidden;
 }
+/* There is the border on the right which slings out a bit; get rid of it */
+#testimonials ul li:last-child{
+  border-right: 0;
+}
+/* ------------------------------------------------------------------ */
 #testimonials ul:hover li{
   padding: 1.5em 0;
   width: 10%;
