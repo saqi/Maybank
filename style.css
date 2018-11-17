@@ -258,7 +258,6 @@ font-family: arialnarrow;
   box-sizing: border-box;
 }
 #testimonials ul li{
-  padding: 4em 0;
   list-style: none;
   width: 20%;
   height: 100%;
@@ -268,6 +267,10 @@ font-family: arialnarrow;
   transition: 0.5s;
   text-align: center;
   overflow: hidden;
+  /* Center the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* There is the border on the right which slings out a bit; get rid of it */
 #testimonials ul li:last-child{
