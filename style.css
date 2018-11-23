@@ -252,16 +252,16 @@ font-family: arialnarrow;
   width: 100%;
   height: 250px;
   background: white;
-  margin: 0;
+  margin: 40px; 0px
   padding: 0;
-  border: 1px solid #000;
+  border: 1px solid #7a5e2a;
   box-sizing: border-box;
 }
 #testimonials ul li{
   list-style: none;
   width: 20%;
   height: 100%;
-  border-right: 1px solid #000;
+  border-right: 1px solid #7a5e2a;
   float: left;
   box-sizing: border-box;
   transition: 0.5s;
@@ -301,7 +301,7 @@ font-family: arialnarrow;
   opacity: 1;
 }
 #testimonials ul li .content h3{
-  color: #0066ff;
+  color: #7a5e2a;
   font-weight: 800;
 }
 #testimonials ul li .content p.address{
