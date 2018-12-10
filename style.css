@@ -288,6 +288,14 @@ div.created-by {
   font-size: 16px;
   font-family: arialnarrow;
   padding: 2em 0;
+  position: relative;
+}
+div.created-by.parallelogram {
+  width: 50%;
+  height: 20px;
+  transform: skew(-20deg);
+  background: rgba(0, 0, 0, 0.6);
+  margin: 2em auto;
 }
 
 @font-face {
