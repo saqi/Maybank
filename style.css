@@ -218,13 +218,16 @@ img {
 #grid .picMessage > p {
   border-top: 2px solid white;
   padding-top: 5px;
+  /* On bigger screens this may not look nice. */
+  font-family: arial;
+  font-size: 0.9em;
+  height: 200px;
 }
 #grid .picMessage {
   position: relative;
   padding: 10px;
   background-color: grey;
   text-align: center;
-  height: 415px;
   top: -50px;
   opacity: 0.8;
   color: white;
@@ -252,8 +255,6 @@ footer::before {
   content: "";
   bottom: -0.5em;
   z-index: -100;
-  box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
-    -30px 0px 40px rgba(0, 0, 0, 0.1);
 }
 footer::before {
   right: 50%;
@@ -283,16 +284,14 @@ footer p {
   }
 div.created-by {
   text-align: center;
-  padding: .5em;
   color: white;
-  font-size: 16px;
+  font-size: 10px;
   font-family: arialnarrow;
-  padding: 2em 0;
+  padding: 0.1em;
   position: relative;
 }
 div.created-by.parallelogram {
-  width: 50%;
-  height: 20px;
+  width: 30%;
   transform: skew(-20deg);
   background: rgba(0, 0, 0, 0.6);
   margin: 2em auto;
