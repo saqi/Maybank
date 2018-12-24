@@ -365,7 +365,7 @@ font-family: arialnarrow;
   width: 10%;
 }
 #testimonials ul li:hover{
-  width: 60%;
+  width: 50%;
 }
 #testimonials ul li .content p{
   display: none;
